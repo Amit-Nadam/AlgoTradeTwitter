@@ -1,4 +1,8 @@
 import React,{Component} from 'react';
+// import component 
+import SearchBarWrapper from './SearchBarWrapper/SearchBarWrapper';
+// import style
+import './App.scss';
 
 export default class App extends Component {
 
@@ -11,7 +15,9 @@ export default class App extends Component {
 
     render() {
         return(
-            <h1>Hello World</h1>
+            <div className="App">
+                <SearchBarWrapper/>
+            </div>
         );
     }
 }
