@@ -6,22 +6,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .wrapper {
-        width: 50%;
-        height: 60%;
-    }
-    .twitterLogo{
-        width: auto;
-        height: 40%;
-        left: 20%;
-        margin-bottom: 10px;
-        // background-color: red;
-        background-image: url(../../../#{$twitter_logo_path});
-        background-repeat: no-repeat;
-        background-size: contain;
-        // background-attachment: fixed;
-        background-position: center;
-    }
 }
 
 

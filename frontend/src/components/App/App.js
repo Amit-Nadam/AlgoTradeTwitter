@@ -1,29 +1,21 @@
 import React,{Component} from 'react';
 // import component 
-import SearchBarWrapper from './SearchBarWrapper/SearchBarWrapper';
 // import style
 import './App.scss';
-
+import SearchPage from '../Pages/SearchPage/SearchPage';
 export default class App extends Component {
 
     constructor(...args) {
         super(...args);
         this.state = {
-            search:'',
+            searchText:'',
         };
-    }
-
-    onSearch = (e) => () =>{
-        // this.state.search = 'sadas';
     }
 
     render() {
         return(
             <div className="App">
-                <div className="wrapper"> 
-                    <div className="twitterLogo">&nbsp;</div>
-                    <SearchBarWrapper/>
-                </div>
+                <SearchPage/>
             </div>
         );
     }
