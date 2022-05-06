@@ -3,6 +3,8 @@ import React,{Component} from 'react';
 // import style
 import './App.scss';
 import SearchPage from '../Pages/SearchPage/SearchPage';
+import ResultPage from '../Pages/ResultPage/ResultPage';
+
 export default class App extends Component {
 
     constructor(...args) {
@@ -15,7 +17,8 @@ export default class App extends Component {
     render() {
         return(
             <div className="App">
-                <SearchPage/>
+                {/* <SearchPage/> */}
+                <ResultPage/>
             </div>
         );
     }
