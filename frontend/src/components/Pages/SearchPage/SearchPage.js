@@ -41,6 +41,7 @@ class SearchPage extends Component {
                                 />
                     <SearchList getText={this.getText}
                                 getoptionsList={this.getoptionsList}
+                                updateText={this.updateSearchText}
                                 />                
                 </div>
             </div>
