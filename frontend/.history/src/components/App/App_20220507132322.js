@@ -4,7 +4,7 @@ import React,{Component} from 'react';
 import './App.scss';
 import SearchPage from '../Pages/SearchPage/SearchPage';
 import ResultPage from '../Pages/ResultPage/ResultPage';
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 export default class App extends Component {
 
@@ -20,10 +20,12 @@ export default class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <Routes>
-                        <Route exact  path="/" element={<SearchPage />} />
-                        <Route exact path="analysis" element={<ResultPage />} />
+
+                    <SearchPage/>
+                    <ResultPage/>
                     </Routes>
                 </BrowserRouter>
+
             </div>
         );
     }

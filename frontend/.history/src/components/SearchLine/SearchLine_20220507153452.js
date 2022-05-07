@@ -6,6 +6,8 @@ import { faSearch,faXmark} from '@fortawesome/free-solid-svg-icons';
 
 
 const SearchLine = ({search,updateText,getText})=>{
+    const navigate = useNavigate();
+
     return (
             <div className="search-line">
                 <FontAwesomeIcon icon={faSearch} className="faSearch"

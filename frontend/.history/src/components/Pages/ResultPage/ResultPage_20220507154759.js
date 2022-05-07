@@ -12,7 +12,7 @@ class ResultPage extends Component {
     constructor(...args) {
         super(...args);
         this.location = this.props.location;
-        console.log(this.location.state.query);
+        console.log(location.query);
     }
 
     render(){

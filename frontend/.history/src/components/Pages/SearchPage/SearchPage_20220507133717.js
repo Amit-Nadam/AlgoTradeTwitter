@@ -8,7 +8,6 @@ class SearchPage extends Component {
 
     constructor(...args) {
         super(...args);
-        this.navigate = this.props.navigate;
         this.state = {
             searchText: '',
             optionList: ['bla1','bla2','bla3'],
@@ -20,8 +19,8 @@ class SearchPage extends Component {
     }
 
     search = ()=>{
-        this.navigate('./analysis',{state: {query: this.state.searchText}});
-        // navigate('/analysis');
+        const navigate = useNavigate();
+        navigate('/analysis');
     }
 
     getText = () => {
@@ -51,7 +50,4 @@ class SearchPage extends Component {
     }
 }
 
-export default function(props){
-    const navigation = useNavigate();
-    return <SearchPage navigate={navigation}/>
-} 
+export default SearchPage;

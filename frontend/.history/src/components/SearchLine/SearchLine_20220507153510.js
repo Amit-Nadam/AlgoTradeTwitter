@@ -2,10 +2,13 @@ import './SearchLine.scss';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch,faXmark} from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const SearchLine = ({search,updateText,getText})=>{
+    const navigate = useNavigate();
+
     return (
             <div className="search-line">
                 <FontAwesomeIcon icon={faSearch} className="faSearch"

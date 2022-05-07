@@ -9,12 +9,6 @@ import {useLocation} from 'react-router-dom';
 
 class ResultPage extends Component {
 
-    constructor(...args) {
-        super(...args);
-        this.location = this.props.location;
-        console.log(this.location.state.query);
-    }
-
     render(){
         return(
             <div className="result-page">

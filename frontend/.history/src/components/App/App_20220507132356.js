@@ -20,10 +20,12 @@ export default class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <Routes>
-                        <Route exact  path="/" element={<SearchPage />} />
-                        <Route exact path="analysis" element={<ResultPage />} />
+                        <Route path="/" element={<SearchPage />}>
+                        <SearchPage/>
+                        <ResultPage/>
                     </Routes>
                 </BrowserRouter>
+
             </div>
         );
     }

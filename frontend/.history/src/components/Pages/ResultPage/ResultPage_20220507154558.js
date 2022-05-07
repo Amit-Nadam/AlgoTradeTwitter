@@ -8,12 +8,7 @@ import {useLocation} from 'react-router-dom';
 
 
 class ResultPage extends Component {
-
-    constructor(...args) {
-        super(...args);
-        this.location = this.props.location;
-        console.log(this.location.state.query);
-    }
+    const location = useLocation();
 
     render(){
         return(
@@ -27,7 +22,6 @@ class ResultPage extends Component {
     }
 }
 export default function(props){
-    const location = useLocation();
-    return <ResultPage location={location}/>
+    return <ResultPage/>
 }
 

@@ -20,7 +20,7 @@ class SearchPage extends Component {
     }
 
     search = ()=>{
-        this.navigate('./analysis',{state: {query: this.state.searchText}});
+        this.navigate('./analysis');
         // navigate('/analysis');
     }
 

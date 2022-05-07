@@ -21,7 +21,7 @@ export default class App extends Component {
                 <BrowserRouter>
                     <Routes>
                         <Route exact  path="/" element={<SearchPage />} />
-                        <Route exact path="analysis" element={<ResultPage />} />
+                        <Route exact path="analysis" element={<ResultPage />}  {...this.props} />
                     </Routes>
                 </BrowserRouter>
             </div>
