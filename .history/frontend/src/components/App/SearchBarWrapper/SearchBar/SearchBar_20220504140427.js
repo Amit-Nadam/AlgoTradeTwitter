@@ -1,0 +1,13 @@
+import './SearchBar.scss';
+//import './
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch} from '@fortawesome/free-solid-svg-icons';
+
+const SearchBar = ()=>(
+    <div className="SearchBar">
+        <FontAwesomeIcon icon={faSearch} />
+        <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+    </div>
+);
+
+export default SearchBar;

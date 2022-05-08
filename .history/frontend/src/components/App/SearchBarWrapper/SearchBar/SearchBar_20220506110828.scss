@@ -1,0 +1,19 @@
+@import './../../../../styles/theme.scss';
+
+.SearchBar{
+
+}   
+    .faSearch{
+        transition: all .2s ease-in-out;
+        &:hover{
+            color: $dark-blue;
+        }
+    }
+
+    .faXmark{
+        transition: all .3s ease-in-out;
+        &:hover{
+            color: $dark-blue;
+        }
+    }
+}

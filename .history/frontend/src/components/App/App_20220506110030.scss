@@ -1,0 +1,24 @@
+@import './../../styles/main.scss';
+
+.App{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+        width: 50%;
+        height: auto;
+        background-color:red;
+    }
+    .twitterLogo{
+        width: auto;
+        height: 70%;
+        background-image: url(../../../#{$twitter_logo_path});
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+
+

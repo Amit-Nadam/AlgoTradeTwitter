@@ -1,0 +1,42 @@
+@import './../../../../styles/theme.scss';
+
+.SearchBar{
+    background-color: $extra-light-gray;
+    border: .12em solid $blue;
+    box-shadow: 10px 15px rgba(240, 240, 240, 0.1);
+    border-radius: .5em;
+    color: $blue;
+    font-size: 35px;
+    padding: .5em;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    gap: 1%;
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover{
+        box-shadow: 15px 20px rgba(240, 240, 240, 0.1);
+        background-color: $super-light-gray;
+    }
+    &:focus{
+        background-color: $super-light-gray;
+    }
+    // &.SearchBarIcon{
+    //     width: 100%;
+    // }
+
+    // .SearchBarXClose{
+    //     background-color: red;
+    //     width: 100%;
+    // }
+
+    .SearchInput{
+        width: 100%;
+        border:0;
+        font-size: inherit;
+        color: $black;
+        // animation: text 3.5s steps(35, end), cursor 1s step-end infinite;
+        background-color: inherit;
+        &:focus{
+            outline: none;
+        }
+    }
+}

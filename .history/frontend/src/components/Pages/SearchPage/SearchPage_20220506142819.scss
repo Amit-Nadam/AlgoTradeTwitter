@@ -1,0 +1,24 @@
+@import '../../../styles/theme.scss';
+
+.search-page{
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+        background-color: red;
+    }
+    .twitterLogo{
+        width: 150px;
+        height: auto;
+        margin-bottom: 10px;
+        // background-color: red;
+        background-image: url(../../../../#{$twitter_logo_path});
+        background-repeat: no-repeat;
+        background-size: contain;
+        // background-attachment: fixed;
+        background-position: center;
+    }
+}

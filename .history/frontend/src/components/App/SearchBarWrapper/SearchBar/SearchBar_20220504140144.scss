@@ -1,0 +1,12 @@
+@import './../../../../styles/theme.scss';
+
+.SearchBar{
+    background-color: white;
+    border: .2em solid $dark-gray;
+    box-shadow: 10px 15px rgba(71,71,71,0.1);
+    border-radius: .5em;
+    color: $dark-gray;
+    font-size: 30px;
+    padding: 15px;
+
+}

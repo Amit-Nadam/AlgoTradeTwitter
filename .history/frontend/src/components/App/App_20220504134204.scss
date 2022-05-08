@@ -1,0 +1,7 @@
+@import './../../styles/main.scss';
+
+##{$APP} .App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

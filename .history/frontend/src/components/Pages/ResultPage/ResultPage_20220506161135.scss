@@ -1,0 +1,10 @@
+@import './../../../styles/theme.scss';
+
+.result-page{
+    display: grid;
+    position: relative;
+    left: 5%;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 30% 30%;
+    // gap: 2%;
+}

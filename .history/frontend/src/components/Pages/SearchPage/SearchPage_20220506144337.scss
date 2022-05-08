@@ -1,0 +1,25 @@
+@import '../../../styles/theme.scss';
+
+.search-page{
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    .wrapper{
+        top: 25%;
+        left: 20%;
+        position: relative;
+        width: 70%;
+        .twitterLogo{
+            // margin-left: 15%;
+            width: 100%;
+            height: 170px;
+            margin-bottom: -1px;
+            background-image: url(../../../../#{$twitter_logo_path});
+            background-repeat: no-repeat;
+            background-size: contain;
+            // background-attachment: fixed;
+            background-position: center center;
+        }
+    }
+    
+}

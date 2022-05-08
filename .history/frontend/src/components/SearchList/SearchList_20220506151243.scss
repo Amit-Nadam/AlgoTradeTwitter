@@ -1,0 +1,29 @@
+
+@import './../../styles/theme.scss';
+
+.search-list{
+    background-color: $blue;
+    position: relative;
+    font-size: 30px;
+    left: 1.5%;
+    width: 97%;
+    height: auto;
+    border: 2px solid $dark-blue;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .list-item{
+        margin: 3px;
+        padding: 3px;
+        padding-left: 20px;
+        list-style-type: none; 
+        border-radius: 3px;
+        color: $blue;
+        background-color: $super-light-gray;
+        // transition: background-color .3s ease-in-out;
+        &:hover{
+            background-color: $extra-light-gray;
+        }
+    }
+
+}

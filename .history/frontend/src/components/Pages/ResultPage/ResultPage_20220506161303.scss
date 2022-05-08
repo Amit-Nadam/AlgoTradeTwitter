@@ -1,0 +1,12 @@
+@import './../../../styles/theme.scss';
+
+.result-page{
+    display: grid;
+    position: relative;
+    max-width: 90%;
+    left: 5%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 5%;    
+    overflow: hidden;
+}

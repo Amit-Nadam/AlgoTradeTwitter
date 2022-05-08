@@ -1,0 +1,17 @@
+@import './../../styles/main.scss';
+
+.App{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &.twitterLogo{
+        
+    }
+}
+
+
+
+background-image: url(#{$twitter_logo_path});

@@ -1,0 +1,14 @@
+// .SearchbarWrapper{
+//     column-count: 2;
+// }
+@import './../../../styles/theme.scss';
+
+.SearchbarWrapper{
+    // border: 1px solid $dark-gray;
+    border-radius: 20px;
+    background-color:red;
+    height: 120px;
+    max-width: 60%;
+    margin-top: 20%;
+    margin-left: 20%;
+}

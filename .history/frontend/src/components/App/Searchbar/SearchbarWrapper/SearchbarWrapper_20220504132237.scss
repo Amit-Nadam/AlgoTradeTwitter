@@ -1,0 +1,10 @@
+@import "./../../../../styles/theme.scss";
+
+.SearchbarWrapper{
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 10% 90%;
+    height: 100%;
+    border-radius: 20px;
+    color: $dark-gray;   
+}

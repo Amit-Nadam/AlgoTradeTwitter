@@ -1,0 +1,11 @@
+@import './../../styles/main.scss';
+
+.App{
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: inherit;
+    display: block;
+    width: 100%;
+    background-color: black;
+}

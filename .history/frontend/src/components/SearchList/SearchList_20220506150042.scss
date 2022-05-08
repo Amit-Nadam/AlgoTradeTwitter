@@ -1,0 +1,14 @@
+
+@import './../../styles/theme.scss';
+
+.search-list{
+    background-color: $light-gray;
+    position: relative;
+    left: 1%;
+    width: 98%;
+    height: 100px;
+    border: .12em solid $blue;
+    border-radius: 15px;
+
+
+}

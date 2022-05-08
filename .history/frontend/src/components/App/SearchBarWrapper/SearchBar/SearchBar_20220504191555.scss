@@ -1,0 +1,35 @@
+@import './../../../../styles/theme.scss';
+
+.SearchBar{
+    background-color: $super-light-gray;
+    border: .12em solid $black;
+    box-shadow: 10px 15px rgba(100, 100, 100, 0.1);
+    border-radius: .5em;
+    color: $light-gray;
+    font-size: 35px;
+    padding: .5em;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    gap: 1%;
+
+    // &.SearchBarIcon{
+    //     width: 100%;
+    // }
+
+    // .SearchBarXClose{
+    //     background-color: red;
+    //     width: 100%;
+    // }
+
+    .SearchInput{
+        width: 100%;
+        border:0;
+        font-size: inherit;
+        color: inherit;
+        // animation: text 3.5s steps(35, end), cursor 1s step-end infinite;
+        background-color: inherit;
+        &:focus{
+            outline: none;
+        }
+    }
+}

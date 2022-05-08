@@ -1,0 +1,11 @@
+// .SearchbarWrapper{
+//     column-count: 2;
+// }
+@import './../../../styles/theme.scss';
+
+##{$App} .SearchbarWrapper{
+
+    background-color:red;
+    height:20px;
+    max-width: 60%;
+}

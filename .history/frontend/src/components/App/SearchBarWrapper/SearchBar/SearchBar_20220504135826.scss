@@ -1,0 +1,8 @@
+@import './../../../../styles/theme.scss';
+
+.SearchBar{
+    background-color: white;
+    border: 4px solid $dark-gray;
+    border-radius: 20%;
+    font-size: 30px;
+}
