@@ -3,7 +3,6 @@ from flask_cors import CORS
 
 # refrence this file
 app = Flask(__name__)
-CORS(app)
 
 @app.route("/analysis")
 def index():

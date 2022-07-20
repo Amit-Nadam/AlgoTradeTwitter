@@ -27,6 +27,7 @@ class ResultPage extends Component {
             this.pieData = response.data.pie;
     
             this.timeData = response.data.time;
+            console.log(response)
             this.setState({
                 after_load: 
                 <div className="result-page">
@@ -42,7 +43,7 @@ class ResultPage extends Component {
 
     render(){
         return(
-            this.state.after_load
+            this.after_load
         );
     }
 }
