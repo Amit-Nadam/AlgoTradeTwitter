@@ -14,12 +14,17 @@ class ResultPage extends Component {
         this.location = this.props.location;
         this.state = {
             after_load: null,
-        };
-        axios.get(`http://127.0.0.1:5000/analysis`,{params: {symbol: this.props.symbol}})
-        .then(response =>{
+        }
+        axios({
+            method: "GET",
+            url:"http://127.0.0.1:5000/analysis",
+        }).then(response =>{
             this.treeMapData = response.data.treeMap;
+
             this.positiveData = response.data.positive;
+    
             this.pieData = response.data.pie;
+    
             this.timeData = response.data.time;
             this.setState({
                 after_load: 
@@ -31,11 +36,18 @@ class ResultPage extends Component {
                 </div>
             });
         });
+
     }
-    render(){return(this.state.after_load);}
+
+    render(){
+        return(
+            this.state.after_load
+        );
+    }
 }
 export default function(props){
     const location = useLocation();
-    return <ResultPage location={location} symbol={location.state.query} />
+    console.log(location.state);
+    return <ResultPage location={location}/>
 }
 

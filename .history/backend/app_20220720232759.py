@@ -8,7 +8,8 @@ CORS(app)
 
 @app.route("/analysis",methods=['GET'])
 def index():
-    symbol = request.args.get('symbol')
+    x = request.args.get('symbol')
+    print('Hello world!',x, file=sys.stderr)
     response_body = {}
     response_body['treeMap'] = [
             {

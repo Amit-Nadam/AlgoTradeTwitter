@@ -1,14 +1,13 @@
-from flask import Flask, request
+from flask import Flask
 from flask_cors import CORS
-import sys
 
 # refrence this file
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/analysis",methods=['GET'])
-def index():
-    symbol = request.args.get('symbol')
+@app.route("/analysis<symbol>")
+def index(symbol):
+    print(symbol)
     response_body = {}
     response_body['treeMap'] = [
             {

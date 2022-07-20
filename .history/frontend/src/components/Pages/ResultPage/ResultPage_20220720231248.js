@@ -12,11 +12,14 @@ class ResultPage extends Component {
     constructor(...args) {
         super(...args);
         this.location = this.props.location;
+        this.symbol = this.props.symbol;
         this.state = {
             after_load: null,
         };
-        axios.get(`http://127.0.0.1:5000/analysis`,{params: {symbol: this.props.symbol}})
-        .then(response =>{
+        axios({
+            method: "GET",
+            url:"http://127.0.0.1:5000/analysis{this.symbol}",
+        }).then(response =>{
             this.treeMapData = response.data.treeMap;
             this.positiveData = response.data.positive;
             this.pieData = response.data.pie;
