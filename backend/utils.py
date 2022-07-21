@@ -1,4 +1,5 @@
 from xmlrpc.client import DateTime
+from pysentimiento.preprocessing import preprocess_tweet
 from twython import Twython
 import json
 import pandas as pd
