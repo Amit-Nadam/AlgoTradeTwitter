@@ -21,7 +21,6 @@ class SearchPage extends Component {
 
     search = ()=>{
         this.navigate('./analysis',{state: {query: this.state.searchText}});
-        // navigate('/analysis');
     }
 
     getText = () => {
