@@ -186,14 +186,19 @@ def count_hold_buy_sell(tweets):
     return dict_.keys, dict_.values
 
 def sentiment_tweets(tweets):
-    tweets['clean_text'] = tweets['text'].apply(lambda s: preprocess_tweet(s))
-    analyzer = create_analyzer(task="sentiment", lang="en")
-    
-    sentiment = []
-    tweets['sentiment'] = 0
-    for i in range(tweets.shape[0]):
-        statmente = analyzer.predict(tweets.iloc[i]["clean_text"])
-        sentiment.append(max(statmente.probas, key=statmente.probas.get))
-    tweets['sentiment'] = sentiment
+  sentiment = {'NEG': [], 'POS': []}
+  tweets['sentiment'] = 0
+  for i in range(tweets.shape[0]):
+    statmente = analyzer.predict(tweets.iloc[i]["clean_text"])
+    sentiment['NEG'].append(round(statmente.probas['NEG'], 2))
+    sentiment['POS'].append(round(statmente.probas['POS'], 2))
+  return sentiment
 
-    tweets[['text', 'sentiment']]
+def count_values_sentiment(sentiment):
+  dict_ = {}
+  for i in np.linspace(0,1,11):
+    dict_[round(i,1)] = 0
+  for sent in sentiment:
+    dict_[round(sent,1)] +=1
+  return dict_
+
