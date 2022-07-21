@@ -1,20 +1,20 @@
 from flask import Flask, request
 from flask_cors import CORS
 from utils import *
-import sys
 
 # refrence this file
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/analysis",methods=['GET'])
+@app.route("/פםפ",methods=['GET'])
 def index():
     symbol = request.args.get('symbol')
-    connection()
+    # connection()
     tweets = get_tweets_of_stock(symbol)
     tweets = run_clean_text(tweets)
     response_body = {}
     response_body['treeMap'] = get_top_15(tweets);
+    sentiment = sentiment_tweets(tweets)
     pos = count_values_sentiment(sentiment['POS'])
     neg = count_values_sentiment(sentiment['NEG'])
     response_body['positive'] = [
