@@ -1,14 +1,18 @@
-from xmlrpc.client import DateTime
+# from xmlrpc.client import DateTime
 from twython import Twython
+# import csv
 import json
 import pandas as pd
+# from datetime import datetime
 import re
+# from textblob import TextBlob
 import numpy as np
-from collections import OrderedDict
-import nltk
-import yfinance as yf
-import matplotlib.pyplot as plt
-import numpy as np
+# from pysentimiento import create_analyzer
+# from pysentimiento.preprocessing import preprocess_tweet
+# from pysentimiento import create_analyzer
+# import pprint
+# import operator
+# from collections import OrderedDict
 import nltk
 import yfinance as yf
 import pendulum
@@ -16,6 +20,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 from nltk.corpus import stopwords
+# import string 
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet as wn
 from datetime import date, timedelta
@@ -37,16 +42,9 @@ def get_tweets_of_stock(symbol, count = 100):
     today = date.today()
     time_search = str(date.today())
     time_search_end = date.today() - timedelta(days=7)
-    
-    creds = {}
-    creds['CONSUMER_KEY'] = 'lwGc7BqUKODAsmLchbI7NxsD9'
-    creds['CONSUMER_SECRET'] = 'eFLyC3NyUOcVbUjWkItxxTvnIjoiKgvxkRp8gFn8kzfHjiIj9g'
-    creds['ACCESS_TOKEN'] = '1314146132872908801-z9LD9Wz7rSwKDqynGJ8rdpoZcPgiUr'
-    creds['ACCESS_SECRET'] = 'Hz5stK6AfOSc9Lg2rSqR8KKBbq17EZKZiPKd1KEZ5iwg0'
-
     # Load credentials from json file
-    # with open("twitter_credentials.json", "r") as file:
-    #     creds = json.load(file)
+    with open("twitter_credentials.json", "r") as file:
+        creds = json.load(file)
 
     # Instantiate an object
     python_tweets = Twython(creds['CONSUMER_KEY'], creds['CONSUMER_SECRET'])
@@ -116,9 +114,10 @@ def get_top_15(tweets_data_frame):
             word_dict[word] = 1
 
     sort_orders = sorted(word_dict.items(), key=lambda x: x[1], reverse=True)
+    new_dict = {}
 
     ret = []
-    for i in range(min(len(sort_orders),15)):
+    for i in range(15):
         ret.append({
             'x' : sort_orders[i][0], 
             'y': sort_orders[i][1]})
@@ -185,8 +184,6 @@ def count_hold_buy_sell(tweets):
     return dict_.keys, dict_.values
 
 def sentiment_tweets(tweets):
-  tweets['clean_text'] = tweets['text'].apply(lambda s: preprocess_tweet(s))
-  analyzer = create_analyzer(task="sentiment", lang="en") 
   sentiment = {'NEG': [], 'POS': []}
   tweets['sentiment'] = 0
   for i in range(tweets.shape[0]):
