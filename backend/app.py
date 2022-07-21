@@ -6,7 +6,7 @@ from utils import *
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/פםפ",methods=['GET'])
+@app.route("/analysis",methods=['GET'])
 def index():
     symbol = request.args.get('symbol')
     # connection()

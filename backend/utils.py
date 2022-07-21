@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import nltk
 import yfinance as yf
-import pendulum
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
