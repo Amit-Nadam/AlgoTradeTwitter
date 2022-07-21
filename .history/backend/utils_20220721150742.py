@@ -9,9 +9,9 @@ import re
 import numpy as np
 # from pysentimiento import create_analyzer
 # from pysentimiento.preprocessing import preprocess_tweet
-# from pysentimiento import create_analyzer
-# import pprint
-# import operator
+from pysentimiento import create_analyzer
+import pprint
+import operator
 # from collections import OrderedDict
 import nltk
 import yfinance as yf
@@ -20,7 +20,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 from nltk.corpus import stopwords
-# import string 
+import string 
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet as wn
 from datetime import date, timedelta
