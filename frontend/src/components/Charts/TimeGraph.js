@@ -4,49 +4,52 @@ import ReactApexChart from "react-apexcharts";
 class TimeGraph extends React.Component {
     constructor(props) {
         super(props);
-
+        this.min = Math.min(props.data)
+        console.log(this.min);
+        console.log( new Date('01 Aug 2020').getTime());
         this.state = {
             series: [{
                 data: props.data,
             }],
             options: {
+                color: 'red',
                 chart: {
                     id: 'area-datetime',
                     type: 'area',
                     height: 350,
                     zoom: {
-                    autoScaleYaxis: true
+                        autoScaleYaxis: true
                     }
                 },
                 annotations: {
-                yaxis: [{
-                    y: 30,
-                    borderColor: '#999',
-                    label: {
-                        show: true,
-                        text: 'Support',
-                        style: {
-                        color: "#fff",
-                        background: '#00E396'
+                    yaxis: [{
+                        y: 30,
+                        borderColor: '#fff',
+                        label: {
+                            show: true,
+                            text: 'Support',
+                            style: {
+                            color: "#fff",
+                            background: '#00E396'
+                            }
                         }
-                    }
-                }],
-                xaxis: [{
-                    x: new Date('14 Nov 2012').getTime(),
-                    borderColor: '#999',
-                    yAxisIndex: 0,
-                    label: {
-                        show: true,
-                        text: 'Rally',
-                        style: {
-                        color: "#fff",
-                        background: '#775DD0'
+                    }],
+                    xaxis: [{
+                        x: new Date('01 Aug 2021').getTime(),
+                        borderColor: '#999',
+                        yAxisIndex: 0,
+                        label: {
+                            show: true,
+                            text: 'Rally',
+                            style: {
+                            color: "#fff",
+                            background: '#775DD0'
+                            }
                         }
-                    }
-                }]
+                    }]
                 },
                 dataLabels: {
-                    enabled: false
+                    enabled: false,
                 },
                 markers: {
                     size: 0,
@@ -54,8 +57,19 @@ class TimeGraph extends React.Component {
                 },
                 xaxis: {
                     type: 'datetime',
-                    min: new Date('01 Mar 2012').getTime(),
-                    tickAmount: 6,
+                    tickAmount: 5,
+                    labels: {
+                        style:{
+                            colors: '#FFF'
+                        }
+                    }
+                },
+                yaxis:{
+                    labels: {
+                        style:{
+                            colors: '#FFF'
+                        }
+                    }
                 },
                 tooltip: {
                     x: {
@@ -80,7 +94,7 @@ class TimeGraph extends React.Component {
         this.setState({
             selection: timeline
         })
-    
+
         switch (timeline) {
             case 'one_month':
             TimeGraph.exec(
@@ -129,16 +143,16 @@ class TimeGraph extends React.Component {
     render() {
         return (
                 <div id="chart">
-                    <div class="toolbar">
+                    {/* <div class="toolbar">
                         <button id="one_month"
-                                    onClick={()=>this.updateData('one_month')} 
+                                    onClick={()=>this.updateData('one_month')}
                                     className={ (this.state.selection==='one_month' ? 'active' : '')}
                                     >
                                     1M
                         </button>
                     &nbsp;
                     <button id="six_months"
-                                onClick={()=>this.updateData('six_months')} 
+                                onClick={()=>this.updateData('six_months')}
                                 className={ (this.state.selection==='six_months' ? 'active' : '')}>
                         6M
                     </button>
@@ -156,13 +170,13 @@ class TimeGraph extends React.Component {
                     </button>
                     &nbsp;
                     <button id="all"
-                                onClick={()=>this.updateData('all')} 
+                                onClick={()=>this.updateData('all')}
                                 className={ (this.state.selection==='all' ? 'active' : '')}>
                         ALL
                     </button>
-                </div>
+                    </div> */}
             <div id="chart-timeline">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="area" height={350} />
+                <ReactApexChart options={this.state.options} color="red" series={this.state.series} type="area" height={320} />
             </div>
         </div>
         );

@@ -27,12 +27,12 @@ class NegativePosativeChart extends React.Component {
                 width: 1,
                 colors: ["#fff"]
             },
-            
+
             grid: {
                 xaxis: {
                     lines: {
                         show: false
-                    }
+                    },
                 }
             },
             yaxis: {
@@ -41,6 +41,11 @@ class NegativePosativeChart extends React.Component {
                 title: {
                     // text: 'Age',
                 },
+                labels: {
+                    style:{
+                        colors: '#FFF'
+                    }
+                }
             },
             tooltip: {
                 shared: false,
@@ -59,8 +64,8 @@ class NegativePosativeChart extends React.Component {
                 text: 'Mauritius population pyramid 2011'
             },
             xaxis: {
-                categories: 
-                    ['0', '0-0.1', '0.1-0.2', '0.2-0.3', '0.3-0.4',  
+                categories:
+                    ['0', '0-0.1', '0.1-0.2', '0.2-0.3', '0.3-0.4',
                         '0.4-0.5', '0.5-0.6', '0.6-0.7', '0.7-0.8', '0.8-0.9','0.9-1', '1'],
                 title: {
                     text: 'Percent'
@@ -68,17 +73,20 @@ class NegativePosativeChart extends React.Component {
                 labels: {
                     formatter: function (val) {
                         return Math.abs(Math.round(val)) + "%"
+                    },
+                    style:{
+                        colors: '#FFF'
                     }
-                }
+                },
             },
         },
         };
     }
     render() {
-        return ( 
+        return (
             <div id="chart">
-                <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height={440} />
-            </div> 
+                <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height={400} />
+            </div>
         );
     }
 }
