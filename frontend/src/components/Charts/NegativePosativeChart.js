@@ -86,7 +86,7 @@ class NegativePosativeChart extends React.Component {
         return (
             <div id="chart">
                 <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height={400} />
-            </div>
+            </div> 
         );
     }
 }
