@@ -58,6 +58,18 @@ class TimeGraph extends React.Component {
                 xaxis: {
                     type: 'datetime',
                     tickAmount: 5,
+                    labels: {
+                        style:{
+                            colors: '#FFF'
+                        }
+                    }
+                },
+                yaxis:{
+                    labels: {
+                        style:{
+                            colors: '#FFF'
+                        }
+                    }
                 },
                 tooltip: {
                     x: {
