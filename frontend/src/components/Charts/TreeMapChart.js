@@ -21,7 +21,7 @@ class TreeMapChart extends React.Component {
                     type: 'treemap'
                 },
                 title: {
-                    text: props.title
+                    text: "Common Words"
                 }
             },
         };
