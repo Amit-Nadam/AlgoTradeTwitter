@@ -61,7 +61,7 @@ class NegativePosativeChart extends React.Component {
                 }
             },
             title: {
-                text: 'Mauritius population pyramid 2011'
+                text: 'Negative and Positive Chart'
             },
             xaxis: {
                 categories:
