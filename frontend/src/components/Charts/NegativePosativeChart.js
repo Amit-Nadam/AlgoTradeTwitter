@@ -61,7 +61,12 @@ class NegativePosativeChart extends React.Component {
                 }
             },
             title: {
-                text: 'Negative and Positive Chart'
+                text: 'Negative and Positive Chart',
+                style: {
+                    color:'#FFF',
+                    fontSize:'30px'
+                    
+                }
             },
             xaxis: {
                 categories:
