@@ -18,4 +18,5 @@ python -m flask run
 
 ### Activate Frontend
 cd frontend
+
 npm start
